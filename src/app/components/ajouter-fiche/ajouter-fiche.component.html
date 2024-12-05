@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="card col-md-6 offset-3 mt-2">
+        <div class="card-header">Ajouter une fiche</div>
+        <button class="btn btn-secondary mt-3" (click)="goBack()">Retour</button>
+
+        <div class="card-body">
+            <form [formGroup]="newFicheFormGroup" (ngSubmit)="handleAjouterFiche()">
+                <div class="mb-3">
+                    <label class="form-label">Conteneur</label>
+                    <input type="text" formControlName="numeroDuConteneur" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Expéditeur</label>
+                    <input type="text" formControlName="nomExpediteur" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Num Expéditeur</label>
+                    <input type="text" formControlName="numeroExpediteur" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Destinataire</label>
+                    <input type="text" formControlName="nomDuDestinataire" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Num Destinataire</label>
+                    <input type="text" formControlName="numeroDestinataire" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Destination</label>
+                    <input type="text" formControlName="destination" class="form-control">
+                </div>
+             
+                <button class="btn btn-info" type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+

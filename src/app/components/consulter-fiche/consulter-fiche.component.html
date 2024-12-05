@@ -1,0 +1,85 @@
+<div class="container my-4">
+<div class="container my-4 border border-secondary p-4">
+    <div class="text-center mb-3 border-bottom pb-2">
+      <h4 class="text-uppercase">BOCA - Bordereau et Services</h4>
+      <p class="text-muted">France, Belfort</p>
+    </div>
+  
+    <div class="row mb-3" *ngIf="ficheDeDepot">
+      <div class="col-6 border-end">
+        <p><strong>Num de conteneur :</strong> {{ficheDeDepot.numeroDuConteneur}}</p>
+        <p><strong>Expéditeur :</strong> {{ficheDeDepot.nomExpediteur}}</p>
+        <p><strong>Tel :</strong> {{ficheDeDepot.numeroExpediteur}}</p>
+        <p><strong>Email :</strong>{{ ficheDeDepot.emailExpediteur}}</p>
+        <p><strong>Total colis : {{quantiteTotal}}</strong></p>
+      </div>
+      <div class="col-6 text-end">
+        <p><strong>Destinataire :</strong> {{ficheDeDepot.nomDuDestinataire}}</p>
+        <p><strong>Tel :</strong> {{ficheDeDepot.numeroDestinataire}}</p>
+        <p><strong>Email :</strong> {{ficheDeDepot.emailDestinataire}}</p>
+        <p><strong>Destination :</strong> {{ficheDeDepot.destination}}</p>
+      </div>
+    </div>
+  
+    <table class="table table-bordered">
+      <thead class="table-light">
+        <tr>
+          <th scope="col">idColis</th>
+          <th scope="col">Description Colis</th>
+          <th scope="col">Quantité</th>
+          <th scope="col">Longueur</th>
+          <th scope="col">Largeur</th>
+          <th scope="col">Hauteur</th>      
+          <th scope="col">Volume</th>
+          <th scope="col">Prix Unitaire</th>
+          <th scope="col">Cout Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of listeColisParFiche">
+          <td>{{c.idColis}}</td>
+          <td>{{c.descriptionColis}}</td>
+          <td>{{c.quantite}}</td>
+          <td>{{c.longueur}}</td>
+          <td>{{c.lageur}}</td>
+          <td>{{c.hauteur}}</td>
+          <td>{{c.volume}}</td>
+          <td>{{c.coutParMetreCube}}</td>
+          <td>{{c.cout}}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>TOTAL</td>
+          <td>{{quantiteTotal}}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>{{coutTotal}}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div class="mt-4 text-center border-top pt-3">
+      <p class="text-muted">Signature du client et de l'agent de réception</p>
+      <div class="d-flex justify-content-around mt-5">
+        <div>
+          <p>__________________________</p>
+          <p>Client</p>
+        </div>
+        <div>
+          <p>__________________________</p>
+          <p>Agent</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Contenu existant -->
+  
+    <!-- Bouton retour -->
+    <button class="btn btn-secondary mt-3" (click)="goBack()">Retour</button>
+    <button class="btn btn-secondary mt-3" (click)="exporter()">Télécharger la fiche</button>
+    <button (click)="exportAsPDFBis()">Exporter en PDF</button>
+  </div>

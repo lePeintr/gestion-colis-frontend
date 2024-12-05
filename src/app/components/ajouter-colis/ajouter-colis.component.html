@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="card col-md-6 offset-3 mt-2">
+        <div class="card-header">Ajouter un colis</div>
+        <button class="btn btn-secondary mt-3" (click)="goBack()">Retour</button>
+
+        <div class="card-body">
+            <form [formGroup]="newColisFormGroup" (ngSubmit)="handleAjouterColis()">
+                <div class="mb-3">
+                    <label class="form-label">Selectionner la fiche</label>
+                    <input type="text" formControlName="idFicheDeDepot" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Description du colis</label>
+                    <input type="text" formControlName="descriptionColis" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Quantité</label>
+                    <input type="text" formControlName="quantite" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Longueur</label>
+                    <input type="text" formControlName="longueur" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Largeur</label>
+                    <input type="text" formControlName="lageur" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Hauteur</label>
+                    <input type="text" formControlName="hauteur" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Cout du metre cube</label>
+                    <input type="text" formControlName="coutParMetreCube" class="form-control">
+                </div>
+             
+                <button class="btn btn-info" type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,58 @@
+<div class="container mt-2">
+   
+    <div class="card">
+        <div class="card-header">Liste des fiches</div>
+        <div class="card-body">
+            <form >
+                <div class="input-group">
+                  <label  class="input-group-text">Id de la fiche</label>
+                  <input type="text" class="form-control" formControlName="">
+                  <button class="btn btn-info">
+                    <i class="bi bi-search"></i>Search
+                  </button>         
+                </div>
+            </form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Fiche</th>
+                        <th>conteneur</th>
+                        <th>Date</th>
+                        <th>Expéditeur</th>
+                        <th>Destinataire</th>
+                        <th>Type de facture</th>
+                        <th>Destination</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let f of listeFiches">
+                        <td>{{f.idFicheDeDepot}}</td>
+                        <td>{{f.numeroDuConteneur}}</td>
+                        <td>{{f.dateDeDepotDuColis | date: 'dd-MM-yyyy'}}</td>
+                        <td>{{f.nomExpediteur}}</td>
+                        <td>{{f.nomDuDestinataire}}</td>
+                        <td></td>
+                        <td>{{f.destination}}</td>
+                        
+                        <td>
+                            <button (click) = "handleSupprimerFiche(f)"  class="btn btn-danger me-2">
+                              <i class="bi bi-trash"></i>
+                            </button>
+                            <button  class="btn btn-info me-2 ">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button (click) = "handleConsulterFiche(f)" class="btn btn-success me-2 ">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                            <button class="btn btn-success ">
+                                <i class="bi bi-box-arrow-in-down"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+

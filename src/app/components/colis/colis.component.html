@@ -1,0 +1,56 @@
+<div class="container mt-2">
+   
+    <div class="card">
+        <div class="card-header">Liste des colis</div>
+        <div class="card-body">
+            <form >
+                <div class="input-group">
+                  <label  class="input-group-text">Id du colis</label>
+                  <input type="text" class="form-control" formControlName="">
+                  <button class="btn btn-info">
+                    <i class="bi bi-search"></i>Search
+                  </button>         
+                </div>
+            </form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID du colis</th>
+                        <th>Fiche</th>
+                        <th>Description du colis</th>
+                        <th>Quantité</th>
+                        <th>Volume(Lxlxh)</th>
+                        <th>Prix du metre cube</th>
+                        <th>prix total(qte x PU x volume)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let c of listeColis">
+                        <td>{{c.idColis}}</td>
+                        <td>{{c.idFicheDeDepot}}</td>
+                        <td>{{c.descriptionColis}}</td>
+                        <td>{{c.quantite}}</td>
+                        <td>{{c.longueur}}x{{c.lageur}}x{{c.hauteur}}={{c.volume}}</td>
+                        <td>{{c.coutParMetreCube}}</td>
+                        <td>{{c.quantite}}x{{c.coutParMetreCube}}x{{c.volume}}={{c.cout}}</td>
+                        <td>
+                            <button class="btn btn-danger me-2">
+                              <i class="bi bi-trash"></i>
+                            </button>
+                            <button  class="btn btn-info me-2 ">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button class="btn btn-success me-2 ">
+                                <i class="bi bi-eye"></i>
+                            </button>
+            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+
+

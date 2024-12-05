@@ -1,0 +1,114 @@
+/* accueil-page.component.css */
+
+/* Style pour la Hero Section */
+.hero {
+    background: url('C:/Users/Administrateur/Desktop/java/envoi-etranger-min.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 150px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    margin: 5px;
+}
+/*section produit */
+.container {
+    max-width: 1200px;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+  
+  .card {
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  /* Styles globaux */
+body {
+    background-color: #f4f7f6; /* Couleur de fond légère */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    color: #007bff; /* Couleur bleue pour les titres */
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    color: #555555;
+    font-size: 1.1rem;
+  }
+  
+  /* Section Promotions & Offres Spéciales */
+  #promotions {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  }
+  
+  .promotion-slide {
+    background: linear-gradient(135deg, #007bff, #00c6ff); /* Gradient moderne */
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    padding: 2rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .promotion-slide:hover {
+    transform: scale(1.05); /* Effet de zoom */
+  }
+  
+  .promotion-slide h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .promotion-slide p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #007bff;
+    border-radius: 50%;
+    padding: 0.5rem;
+  }
+  
+  .btn-primary {
+    background-color: #ffffff;
+    color: #007bff;
+    border: 2px solid #ffffff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: #007bff;
+    color: #ffffff;
+    border: 2px solid #007bff;
+  }
+  

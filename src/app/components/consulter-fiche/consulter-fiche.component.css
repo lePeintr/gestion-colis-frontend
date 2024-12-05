@@ -1,0 +1,45 @@
+.container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-bordered {
+    border-color: #ddd;
+  }
+  
+  .table thead {
+    background-color: #f8f9fa;
+  }
+  
+  .text-uppercase {
+    font-weight: bold;
+  }
+  
+  .text-muted {
+    font-size: 0.9rem;
+  }
+  
+  .text-end {
+    text-align: right !important;
+  }
+  
+  .text-center {
+    text-align: center !important;
+  }
+  /* Appliquer ce style uniquement pour l'export */
+@media print {
+  .container.my-4 {
+    border: none; /* Supprime les bordures */
+  }
+  button {
+    display: none; /* Masque les boutons */
+  }
+  table {
+    border-collapse: collapse; /* Élimine les espaces entre bordures */
+  }
+  table th, table td {
+    border: 1px solid #000; /* Ajoute des bordures propres aux cellules */
+  }
+}
